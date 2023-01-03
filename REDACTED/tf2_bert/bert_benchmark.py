@@ -96,7 +96,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     self.timer_callback = BenchmarkTimerCallback()
     FLAGS.max_seq_length = 512
     FLAGS.max_predictions_per_seq = 76
-    FLAGS.input_files = "REDACTEDpart-*"
+    FLAGS.input_files = "REDACTED/part-*"
     FLAGS.num_train_epochs = 1
     FLAGS.optimizer_type = "lamb"
     FLAGS.explicit_allreduce = False
@@ -190,7 +190,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     FLAGS.num_accumulation_steps = 11
     # To improve kernel launching across multiple GPUs and improve step time
     os.environ["TF_GPU_THREAD_MODE"] = "gpu_private"
-    base_data_dir = "REDACTEDpublic/bert_mlperf_data/"
+    base_data_dir = "REDACTED/public/bert_mlperf_data/"
     FLAGS.bert_config_file = base_data_dir + "bert_config.json"
     FLAGS.model_dir = self._get_model_dir(benchmark_name)
     FLAGS.init_checkpoint = base_data_dir + "model.ckpt-28252"
@@ -220,7 +220,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     FLAGS.max_seq_length = 512
     FLAGS.max_predictions_per_seq = 76
     FLAGS.steps_per_loop = 1
-    FLAGS.input_files = "REDACTEDpart-*"
+    FLAGS.input_files = "REDACTED/part-*"
     FLAGS.num_train_epochs = 1
     FLAGS.num_steps_per_epoch = 10
     FLAGS.optimizer_type = "lamb"
@@ -234,7 +234,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     FLAGS.eval_batch_size = 6
     # To improve kernel launching across multiple GPUs and improve step time
     os.environ["TF_GPU_THREAD_MODE"] = "gpu_private"
-    base_data_dir = "REDACTEDpublic/bert_mlperf_data/"
+    base_data_dir = "REDACTED/public/bert_mlperf_data/"
     FLAGS.bert_config_file = base_data_dir + "bert_config.json"
     FLAGS.model_dir = self._get_model_dir("benchmark_short_1_gpu")
     self._run_and_report_benchmark(force_gpu_memory_alloc=False)
