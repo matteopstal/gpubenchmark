@@ -137,7 +137,7 @@ class TransformerEncoder(tf.keras.Model):
             name='embeddings/layer_norm',
             axis=-1,
             epsilon=util.LAYER_NORM_EPSILON,
-            dtype=tf.float16)(embeddings))
+            dtype=tf.float32)(embeddings))
     embeddings = (
         tf.keras.layers.Dropout(rate=dropout_rate)(embeddings))
 
