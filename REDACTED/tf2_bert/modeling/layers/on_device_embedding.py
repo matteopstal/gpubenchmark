@@ -81,7 +81,7 @@ class OnDeviceEmbedding(tf.keras.layers.Layer):
     if self._use_one_hot:
       one_hot_data = tf.one_hot(
           flat_inputs, depth=self._vocab_size, dtype=self.embeddings.dtype)
-      tf.cast(one_hot_data, tf.float16)
+      one_hot_data = tf.cast(one_hot_data, tf.float16)
       print("ONE HOT DATA TYPE: ", (one_hot_data.dtype))
       print("EMBEDDINGS TYPE: ", (self.embeddings.dtype))
       embeddings = tf.matmul(one_hot_data, self.embeddings)
