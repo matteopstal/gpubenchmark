@@ -21,7 +21,7 @@ from __future__ import print_function
 import functools
 import json
 
-import REDACTED
+# import REDACTED
 from absl import app
 from absl import flags
 import tensorflow.compat.v2 as tf

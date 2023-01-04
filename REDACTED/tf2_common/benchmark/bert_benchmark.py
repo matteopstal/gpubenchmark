@@ -25,7 +25,7 @@ import os
 import time
 
 # pylint: disable=g-bad-import-order
-import REDACTED
+# import REDACTED
 from absl import flags
 from absl.testing import flagsaver
 import tensorflow.compat.v2 as tf

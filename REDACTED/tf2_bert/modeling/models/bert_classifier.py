@@ -16,10 +16,10 @@
 # pylint: disable=g-classes-have-attributes
 from __future__ import absolute_import
 from __future__ import division
-from __future__ import REDACTED
+# from __future__ # import REDACTED
 from __future__ import print_function
 
-import REDACTED
+# import REDACTED
 import tensorflow.compat.v2 as tf
 
 from REDACTED.tf2_bert.modeling import networks

@@ -20,7 +20,7 @@ from __future__ import print_function
 
 import re
 
-import REDACTED
+# import REDACTED
 from absl import flags
 from absl import logging
 import tensorflow.compat.v2 as tf

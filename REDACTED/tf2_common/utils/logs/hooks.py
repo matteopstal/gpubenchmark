@@ -20,7 +20,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import REDACTED
+# import REDACTED
 import tensorflow as tf  # pylint: disable=g-bad-import-order
 
 from REDACTED.tf2_common.utils.logs import logger

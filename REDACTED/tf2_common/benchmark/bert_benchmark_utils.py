@@ -21,7 +21,7 @@ from __future__ import print_function
 import time
 
 # pylint: disable=g-bad-import-order
-import REDACTED
+# import REDACTED
 import numpy as np
 from absl import flags
 import tensorflow.compat.v2 as tf

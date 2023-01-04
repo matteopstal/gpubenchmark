@@ -16,10 +16,10 @@
 
 from __future__ import absolute_import
 from __future__ import division
-from __future__ import REDACTED
+# from __future__ # import REDACTED
 from __future__ import print_function
 
-import REDACTED
+# import REDACTED
 import tensorflow.compat.v2 as tf
 
 _CHR_IDX = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"]

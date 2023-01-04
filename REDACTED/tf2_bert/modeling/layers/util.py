@@ -16,12 +16,12 @@
 
 from __future__ import absolute_import
 from __future__ import division
-from __future__ import REDACTED
+# from __future__ # import REDACTED
 from __future__ import print_function
 
 import functools
 
-import REDACTED
+# import REDACTED
 import tensorflow.compat.v2 as tf
 
 LAYER_NORM_EPSILON = 1e-12
