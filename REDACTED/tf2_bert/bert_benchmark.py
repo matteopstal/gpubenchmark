@@ -220,7 +220,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     FLAGS.max_seq_length = 512
     FLAGS.max_predictions_per_seq = 76
     FLAGS.steps_per_loop = 1
-    FLAGS.input_files = "REDACTED/part-*"
+    FLAGS.input_files = "/data/data/seq_512_mpps_76_tfrecords4/results_tfrecords/part-*"
     FLAGS.num_train_epochs = 1
     FLAGS.num_steps_per_epoch = 10
     FLAGS.optimizer_type = "lamb"
