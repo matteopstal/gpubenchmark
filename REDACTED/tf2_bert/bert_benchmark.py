@@ -193,7 +193,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     base_data_dir = "/data/data/"
     FLAGS.bert_config_file = base_data_dir + "bert_config.json"
     FLAGS.model_dir = self._get_model_dir(benchmark_name)
-    FLAGS.init_checkpoint = base_data_dir + "converted/model.ckpt-28252.data-00000-of-00001"
+    FLAGS.init_checkpoint = base_data_dir + "converted/model.ckpt-28252"
 
   # Convergence test with same params as reference MLPerf
   def benchmark_8_gpu(self):
