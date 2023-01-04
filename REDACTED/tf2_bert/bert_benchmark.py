@@ -190,7 +190,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     FLAGS.num_accumulation_steps = 11
     # To improve kernel launching across multiple GPUs and improve step time
     os.environ["TF_GPU_THREAD_MODE"] = "gpu_private"
-    base_data_dir = "REDACTED/public/bert_mlperf_data/"
+    base_data_dir = "/data/data"
     FLAGS.bert_config_file = base_data_dir + "bert_config.json"
     FLAGS.model_dir = self._get_model_dir(benchmark_name)
     FLAGS.init_checkpoint = base_data_dir + "model.ckpt-28252"
