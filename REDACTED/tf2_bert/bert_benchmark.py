@@ -26,7 +26,7 @@ from absl import logging
 import numpy as np
 import math
 import tensorflow.compat.v2 as tf
-from tf2_bert.bert import common_flags
+from REDACTED.tf2_bert.bert import common_flags
 from REDACTED.tf2_bert.bert import configs
 from REDACTED.tf2_bert.bert import run_pretraining
 from REDACTED.tf2_common.modeling import performance
