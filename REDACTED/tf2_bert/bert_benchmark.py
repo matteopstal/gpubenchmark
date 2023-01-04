@@ -96,7 +96,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     self.timer_callback = BenchmarkTimerCallback()
     FLAGS.max_seq_length = 512
     FLAGS.max_predictions_per_seq = 76
-    FLAGS.input_files = "REDACTED/part-*"
+    FLAGS.input_files = "/data/data/seq_512_mpps_76_tfrecords4/results_tfrecords/part-*"
     FLAGS.num_train_epochs = 1
     FLAGS.optimizer_type = "lamb"
     FLAGS.explicit_allreduce = False
