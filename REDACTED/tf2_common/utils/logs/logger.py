@@ -35,7 +35,7 @@ import uuid
 from six.moves import _thread as thread
 from absl import flags
 import tensorflow as tf
-from REDACTED.tensorflow.python.client import device_lib
+from tensorflow.python.client import device_lib
 
 from REDACTED.tf2_common.utils.logs import cloud_lib
 
