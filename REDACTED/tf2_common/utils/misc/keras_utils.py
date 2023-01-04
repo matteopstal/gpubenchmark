@@ -26,8 +26,8 @@ import time
 from absl import logging
 import tensorflow as tf
 from REDACTED import rewriter_config_pb2
-from REDACTED.tensorflow.python import tf2
-from REDACTED.tensorflow.python.eager import profiler
+from tensorflow.python import tf2
+from tensorflow.python.eager import profiler
 
 
 class BatchTimestamp(object):

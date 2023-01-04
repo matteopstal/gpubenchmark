@@ -24,14 +24,14 @@ import re
 from absl import flags
 from absl import logging
 import tensorflow.compat.v2 as tf
-from REDACTED.tensorflow.python.framework  import ops
-from REDACTED.tensorflow.python.keras import backend_config
-from REDACTED.tensorflow.python.keras.optimizer_v2 import optimizer_v2
-from REDACTED.tensorflow.python.ops import array_ops
-from REDACTED.tensorflow.python.ops import control_flow_ops
-from REDACTED.tensorflow.python.ops import linalg_ops
-from REDACTED.tensorflow.python.ops import math_ops
-from REDACTED.tensorflow.python.ops import state_ops
+from tensorflow.python.framework  import ops
+from tensorflow.python.keras import backend_config
+from tensorflow.python.keras.optimizer_v2 import optimizer_v2
+from tensorflow.python.ops import array_ops
+from tensorflow.python.ops import control_flow_ops
+from tensorflow.python.ops import linalg_ops
+from tensorflow.python.ops import math_ops
+from tensorflow.python.ops import state_ops
 
 FLAGS = flags.FLAGS
 

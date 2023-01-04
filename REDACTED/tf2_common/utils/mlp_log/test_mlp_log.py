@@ -11,7 +11,7 @@ import sys
 
 import pytest
 
-from REDACTED.tensorflow_models.mlperf.models.rough.mlp_log import mlp_log
+from tensorflow_models.mlperf.models.rough.mlp_log import mlp_log
 
 
 class TestMLPerfLog(object):

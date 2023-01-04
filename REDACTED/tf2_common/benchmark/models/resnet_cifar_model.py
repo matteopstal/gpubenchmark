@@ -26,10 +26,10 @@ from __future__ import print_function
 import functools
 # import REDACTED
 import tensorflow as tf
-from REDACTED.tensorflow.python.keras import backend
-from REDACTED.tensorflow.python.keras  import initializers
-from REDACTED.tensorflow.python.keras import layers
-from REDACTED.tensorflow.python.keras import regularizers
+from tensorflow.python.keras import backend
+from tensorflow.python.keras  import initializers
+from tensorflow.python.keras import layers
+from tensorflow.python.keras import regularizers
 
 
 BATCH_NORM_DECAY = 0.997

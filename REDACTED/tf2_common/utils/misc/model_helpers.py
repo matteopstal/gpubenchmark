@@ -22,7 +22,7 @@ import numbers
 
 # import REDACTED
 import tensorflow as tf
-from REDACTED.tensorflow.python.util import nest
+from tensorflow.python.util import nest
 
 
 def past_stop_threshold(stop_threshold, eval_metric):

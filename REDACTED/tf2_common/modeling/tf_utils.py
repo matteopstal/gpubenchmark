@@ -22,7 +22,7 @@ from __future__ import print_function
 import six
 import tensorflow as tf
 
-from REDACTED.tensorflow.python.util import deprecation
+from tensorflow.python.util import deprecation
 from REDACTED.tf2_common.modeling import activations
 
 

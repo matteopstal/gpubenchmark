@@ -21,14 +21,14 @@ from __future__ import print_function
 
 import tensorflow as tf
 
-from REDACTED.tensorflow.python.distribute import distribution_strategy_context as distribute_ctx
-from REDACTED.tensorflow.python.distribute import parameter_server_strategy
-from REDACTED.tensorflow.python.framework import ops
-from REDACTED.tensorflow.python.framework import dtypes
-from REDACTED.tensorflow.python.keras import backend
-from REDACTED.tensorflow.python.keras.optimizer_v2 import optimizer_v2
-from REDACTED.tensorflow.python.ops import control_flow_ops
-from REDACTED.tensorflow.python.ops import variables as tf_variables
+from tensorflow.python.distribute import distribution_strategy_context as distribute_ctx
+from tensorflow.python.distribute import parameter_server_strategy
+from tensorflow.python.framework import ops
+from tensorflow.python.framework import dtypes
+from tensorflow.python.keras import backend
+from tensorflow.python.keras.optimizer_v2 import optimizer_v2
+from tensorflow.python.ops import control_flow_ops
+from tensorflow.python.ops import variables as tf_variables
 
 class OptimizerV2Modified(optimizer_v2.OptimizerV2):
   """This is a subclass optimizer that performs variable updates in

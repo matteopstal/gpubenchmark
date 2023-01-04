@@ -87,7 +87,7 @@ def unparse_line(parsed_line): # type: (ParsedLine) -> str
 def get_mlperf_log():
   """Shielded import of mlperf_log module."""
   try:
-    from REDACTED.tensorflow_models.mlperf.models.rough import mlperf_compliance
+    from tensorflow_models.mlperf.models.rough import mlperf_compliance
 
     def test_mlperf_log_pip_version():
       """Check that mlperf_compliance is up to date."""
@@ -102,7 +102,7 @@ def get_mlperf_log():
         raise ImportError
       return mlperf_compliance.mlperf_log
 
-    from REDACTED.tensorflow_models.mlperf.models.rough.mlperf_compliance import mlperf_log
+    from tensorflow_models.mlperf.models.rough.mlperf_compliance import mlperf_log
 
   except ImportError:
     mlperf_log = None
