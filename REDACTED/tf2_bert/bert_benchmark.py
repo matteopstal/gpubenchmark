@@ -98,7 +98,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     FLAGS.max_predictions_per_seq = 76
     FLAGS.input_files = "/data/data/seq_512_mpps_76_tfrecords4/results_tfrecords/part-*"
     FLAGS.num_train_epochs = 1
-    FLAGS.optimizer_type = "adamw"
+    FLAGS.optimizer_type = "lamb"
     FLAGS.explicit_allreduce = False
     FLAGS.allreduce_bytes_per_pack = 0
     FLAGS.do_eval = True
