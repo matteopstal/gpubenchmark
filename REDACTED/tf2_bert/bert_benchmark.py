@@ -135,6 +135,9 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
         except RuntimeError as e:
           # Virtual devices must be set before GPUs have been initialized
           print(e)
+      else:
+        print("No GPUs Found, aborting...")
+        return
 
     if FLAGS.tpu:
       strategy = distribution_utils.get_distribution_strategy(
@@ -250,7 +253,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     FLAGS.steps_between_eval = FLAGS.steps_per_loop
     # In cloud, checkpoint restoring happens in TPU VM so data path needs to
     # be in GCS.
-    base_data_dir = "REDACTEDpublic/bert_mlperf_data2/"
+    base_data_dir = "REDACTED/public/bert_mlperf_data2/"
     FLAGS.bert_config_file = base_data_dir + "bert_config.json"
     FLAGS.model_dir = self._get_model_dir(benchmark_name)
     FLAGS.init_checkpoint = base_data_dir + "model.ckpt-28252"
