@@ -135,9 +135,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
         except RuntimeError as e:
           # Virtual devices must be set before GPUs have been initialized
           print(e)
-      else:
-        print("No GPUs Found, aborting...")
-        return
+      
 
     if FLAGS.tpu:
       strategy = distribution_utils.get_distribution_strategy(
