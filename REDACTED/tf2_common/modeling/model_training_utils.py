@@ -75,6 +75,7 @@ def steps_to_run(current_step, steps_per_epoch, steps_per_loop):
 def write_txt_summary(training_summary, summary_dir):
   """Writes a summary text file to record stats."""
   summary_path = os.path.join(summary_dir, _SUMMARY_TXT)
+  logging.info('Saving Summary: %s', str(summary_path))
   with tf.io.gfile.GFile(summary_path, 'wb') as f:
     logging.info('Training Summary: \n%s', str(training_summary))
     f.write(json.dumps(training_summary, indent=4))
