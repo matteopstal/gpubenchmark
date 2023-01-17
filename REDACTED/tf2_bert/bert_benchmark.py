@@ -271,6 +271,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     FLAGS.learning_rate = 0.0004
     FLAGS.warmup_steps = 0
     FLAGS.weight_decay_rate = 0.01
+    FLAGS.tpu = True
     self._run_and_report_benchmark()
 
   def benchmark_short_4x4_tpu(self):
