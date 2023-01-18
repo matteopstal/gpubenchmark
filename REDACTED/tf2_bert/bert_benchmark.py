@@ -141,7 +141,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
       print("Getting distribution strategy")
       strategy = distribution_utils.get_distribution_strategy(
           distribution_strategy=FLAGS.distribution_strategy,
-          tpu_address="berttpu-v3-64",
+          tpu_address="local",
           tpu_zone="europe-west4-a")
     else:
       strategy = distribution_utils.get_distribution_strategy(
@@ -253,10 +253,10 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     FLAGS.steps_between_eval = FLAGS.steps_per_loop
     # In cloud, checkpoint restoring happens in TPU VM so data path needs to
     # be in GCS.
-    base_data_dir = "REDACTED/public/bert_mlperf_data2/"
+    base_data_dir = "gs://hpc_files_petro_tpu/data/"
     FLAGS.bert_config_file = base_data_dir + "bert_config.json"
     FLAGS.model_dir = self._get_model_dir(benchmark_name)
-    FLAGS.init_checkpoint = base_data_dir + "model.ckpt-28252"
+    FLAGS.init_checkpoint = base_data_dir + "/converted/model.ckpt-28252.data-00000-of-00001"
 
   def benchmark_4x4_tpu(self):
     print("TPU 4x4 benchmark")
