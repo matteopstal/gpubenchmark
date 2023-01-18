@@ -223,6 +223,7 @@ def run_customized_training(
 
 def run_bert_pretrain(strategy, custom_callbacks=None):
   """Runs BERT pre-training."""
+  print("Run Bert benchmark")
   bert_config = configs.BertConfig.from_json_file(FLAGS.bert_config_file)
   if not strategy:
     raise ValueError('Distribution strategy is not specified.')

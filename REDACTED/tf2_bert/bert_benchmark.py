@@ -138,6 +138,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
       
 
     if FLAGS.tpu:
+      print("Getting distribution strategy")
       strategy = distribution_utils.get_distribution_strategy(
           distribution_strategy=FLAGS.distribution_strategy,
           tpu_address="berttpu-v3-64",
@@ -149,6 +150,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
           num_gpus=FLAGS.num_gpus)
 
     start_time_sec = time.time()
+    print("Run BERT Pretrain!")
     run_pretraining.run_bert_pretrain(strategy, [self.timer_callback])
     wall_time_sec = time.time() - start_time_sec
 
@@ -168,7 +170,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
           "name": "exp_per_second",
           "value": 0.0,
       })
-
+    print("Report benchmark")
     flags_str = flags_core.get_nondefault_flags_as_str()
     self.report_benchmark(
         iters=-1,
