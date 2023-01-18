@@ -33,7 +33,7 @@ def tpu_initialize(tpu_address, tpu_zone=None):
       tpu=tpu_address, zone=tpu_zone)
   if tpu_address not in ('', 'local'):
     print("tpu not in local...")
-    tf.config.experimental_connect_to_cluster(cluster_resolver)
+  tf.config.experimental_connect_to_cluster(cluster_resolver)
   print("initialize tpu system")
   tf.tpu.experimental.initialize_tpu_system(cluster_resolver)
   return cluster_resolver
