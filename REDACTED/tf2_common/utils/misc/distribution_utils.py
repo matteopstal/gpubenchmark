@@ -129,7 +129,7 @@ def get_distribution_strategy(distribution_strategy="mirrored",
   if distribution_strategy == "tpu":
     # When tpu_address is an empty string, we communicate with local TPUs.
     print("Initializing tpus")
-    cluster_resolver = tpu_lib.tpu_initialize('', tpu_zone)
+    cluster_resolver = tpu_lib.tpu_initialize(tpu_address, tpu_zone)
     print("Returning tpu")
     return tf.distribute.experimental.TPUStrategy(cluster_resolver)
 
