@@ -141,7 +141,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
       print("Getting distribution strategy")
       strategy = distribution_utils.get_distribution_strategy(
           distribution_strategy=FLAGS.distribution_strategy,
-          tpu_address="local",
+          tpu_address="berttpu-v3-64",
           tpu_zone="europe-west4-a")
     else:
       strategy = distribution_utils.get_distribution_strategy(
