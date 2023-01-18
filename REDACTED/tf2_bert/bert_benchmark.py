@@ -259,6 +259,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     FLAGS.init_checkpoint = base_data_dir + "model.ckpt-28252"
 
   def benchmark_4x4_tpu(self):
+    print("TPU 4x4 benchmark")
     self._setup()
     self._set_tpu_common("benchmark_4x4_tpu")
     FLAGS.stop_steps = 8103
@@ -270,7 +271,7 @@ class BertClassifyBenchmarkReal(PerfZeroBenchmark):
     FLAGS.warmup_steps = 0
     FLAGS.weight_decay_rate = 0.01
     FLAGS.tpu = True
-    self._run_and_report_benchmark()
+    self._run_and_report_benchmark(False)
 
   def benchmark_short_4x4_tpu(self):
     self._setup()
