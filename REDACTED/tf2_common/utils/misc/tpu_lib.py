@@ -28,6 +28,7 @@ def tpu_initialize(tpu_address, tpu_zone=None):
   Returns:
     A TPUClusterResolver.
   """
+  print("TPU ADDRESS: ", tpu_address)
   cluster_resolver = tf.distribute.cluster_resolver.TPUClusterResolver(
       tpu=tpu_address)
   if tpu_address not in ('', 'local'):
