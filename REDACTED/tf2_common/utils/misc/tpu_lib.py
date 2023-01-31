@@ -30,7 +30,7 @@ def tpu_initialize(tpu_address, tpu_zone=None):
   """
   print("TPU ADDRESS: ", tpu_address)
   cluster_resolver = tf.distribute.cluster_resolver.TPUClusterResolver(
-      tpu=tpu_address)
+      tpu="")
   if tpu_address not in ('', 'local'):
     print("tpu not in local...")
   tf.config.experimental_connect_to_cluster(cluster_resolver)
